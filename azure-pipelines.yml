@@ -10,11 +10,15 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+
+- task: BrowserStackConfig@0
+  inputs:
+    BrowserStackServiceEndPoint: 'Browserstack Connection'
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
-
+- task: BrowserStackResults@0
 - script: |
     npm install
     npm run build
