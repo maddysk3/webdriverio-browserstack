@@ -11,6 +11,10 @@ variables:
   browserstackKey: $(BROWSERSTACK_ACCESS_KEY)
 
 steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.16.0'
+    checkLatest: false
 - task: BrowserStackConfig@0
   inputs:
     BrowserStackServiceEndPoint: 'Browserstack Connection'
