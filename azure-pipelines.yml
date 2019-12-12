@@ -19,5 +19,5 @@ steps:
   inputs:
     BrowserStackServiceEndPoint: 'Browserstack Connection'
 - script: npm install
-- script: npm run parallel
+- script: npm run single
 - task: BrowserStackResults@0
